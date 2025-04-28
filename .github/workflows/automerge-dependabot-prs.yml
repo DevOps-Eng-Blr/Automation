@@ -9,7 +9,7 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    
     steps:
       - name: Approve a PR
         run: gh pr review --approve "$PR_URL"
@@ -23,3 +23,5 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
           #// ..............................
+          
+          # added new line
